@@ -1,690 +1,490 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Decision Bear - Privacy Policy</title><style>
-/* cspell:disable-file */
-/* webkit printing magic: print all background colors */
-html {
-	-webkit-print-color-adjust: exact;
-}
-* {
-	box-sizing: border-box;
-	-webkit-print-color-adjust: exact;
-}
-
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-@media only screen {
-	body {
-		margin: 2em auto;
-		max-width: 900px;
-		color: rgb(55, 53, 47);
-	}
-}
-
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
-
-a,
-a.visited {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.pdf-relative-link-path {
-	font-size: 80%;
-	color: #444;
-}
-
-h1,
-h2,
-h3 {
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
-.page-title {
-	font-size: 2.5rem;
-	font-weight: 700;
-	margin-top: 0;
-	margin-bottom: 0.75em;
-}
-
-h1 {
-	font-size: 1.875rem;
-	margin-top: 1.875rem;
-}
-
-h2 {
-	font-size: 1.5rem;
-	margin-top: 1.5rem;
-}
-
-h3 {
-	font-size: 1.25rem;
-	margin-top: 1.25rem;
-}
-
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.callout {
-	border-radius: 3px;
-	padding: 1rem;
-}
-
-figure {
-	margin: 1.25em 0;
-	page-break-inside: avoid;
-}
-
-figcaption {
-	opacity: 0.5;
-	font-size: 85%;
-	margin-top: 0.5em;
-}
-
-mark {
-	background-color: transparent;
-}
-
-.indented {
-	padding-left: 1.5em;
-}
-
-hr {
-	background: transparent;
-	display: block;
-	width: 100%;
-	height: 1px;
-	visibility: visible;
-	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-img {
-	max-width: 100%;
-}
-
-@media only print {
-	img {
-		max-height: 100vh;
-		object-fit: contain;
-	}
-}
-
-@page {
-	margin: 1in;
-}
-
-.collection-content {
-	font-size: 0.875rem;
-}
-
-.collection-content td {
-	white-space: pre-wrap;
-	word-break: break-word;
-}
-
-.column-list {
-	display: flex;
-	justify-content: space-between;
-}
-
-.column {
-	padding: 0 1em;
-}
-
-.column:first-child {
-	padding-left: 0;
-}
-
-.column:last-child {
-	padding-right: 0;
-}
-
-.table_of_contents-item {
-	display: block;
-	font-size: 0.875rem;
-	line-height: 1.3;
-	padding: 0.125rem;
-}
-
-.table_of_contents-indent-1 {
-	margin-left: 1.5rem;
-}
-
-.table_of_contents-indent-2 {
-	margin-left: 3rem;
-}
-
-.table_of_contents-indent-3 {
-	margin-left: 4.5rem;
-}
-
-.table_of_contents-link {
-	text-decoration: none;
-	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-}
-
-table,
-th,
-td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
-	border-collapse: collapse;
-}
-
-table {
-	border-left: none;
-	border-right: none;
-}
-
-th,
-td {
-	font-weight: normal;
-	padding: 0.25em 0.5em;
-	line-height: 1.5;
-	min-height: 1.5em;
-	text-align: left;
-}
-
-th {
-	color: rgba(55, 53, 47, 0.6);
-}
-
-ol,
-ul {
-	margin: 0;
-	margin-block-start: 0.6em;
-	margin-block-end: 0.6em;
-}
-
-li > ol:first-child,
-li > ul:first-child {
-	margin-block-start: 0.6em;
-}
-
-ul > li {
-	list-style: disc;
-}
-
-ul.to-do-list {
-	padding-inline-start: 0;
-}
-
-ul.to-do-list > li {
-	list-style: none;
-}
-
-.to-do-children-checked {
-	text-decoration: line-through;
-	opacity: 0.375;
-}
-
-ul.toggle > li {
-	list-style: none;
-}
-
-ul {
-	padding-inline-start: 1.7em;
-}
-
-ul > li {
-	padding-left: 0.1em;
-}
-
-ol {
-	padding-inline-start: 1.6em;
-}
-
-ol > li {
-	padding-left: 0.2em;
-}
-
-.mono ol {
-	padding-inline-start: 2em;
-}
-
-.mono ol > li {
-	text-indent: -0.4em;
-}
-
-.toggle {
-	padding-inline-start: 0em;
-	list-style-type: none;
-}
-
-/* Indent toggle children */
-.toggle > li > details {
-	padding-left: 1.7em;
-}
-
-.toggle > li > details > summary {
-	margin-left: -1.1em;
-}
-
-.selected-value {
-	display: inline-block;
-	padding: 0 0.5em;
-	background: rgba(206, 205, 202, 0.5);
-	border-radius: 3px;
-	margin-right: 0.5em;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	white-space: nowrap;
-}
-
-.collection-title {
-	display: inline-block;
-	margin-right: 1em;
-}
-
-.page-description {
-	margin-bottom: 2em;
-}
-
-.simple-table {
-	margin-top: 1em;
-	font-size: 0.875rem;
-	empty-cells: show;
-}
-.simple-table td {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table th {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table-header-color {
-	background: rgb(247, 246, 243);
-	color: black;
-}
-.simple-table-header {
-	font-weight: 500;
-}
-
-time {
-	opacity: 0.5;
-}
-
-.icon {
-	display: inline-block;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-
-img.icon {
-	border-radius: 3px;
-}
-
-.user-icon {
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 100%;
-	margin-right: 0.5rem;
-}
-
-.user-icon-inner {
-	font-size: 0.8em;
-}
-
-.text-icon {
-	border: 1px solid #000;
-	text-align: center;
-}
-
-.page-cover-image {
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	max-height: 30vh;
-}
-
-.page-header-icon {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-}
-
-.page-header-icon-with-cover {
-	margin-top: -0.72em;
-	margin-left: 0.07em;
-}
-
-.page-header-icon img {
-	border-radius: 3px;
-}
-
-.link-to-page {
-	margin: 1em 0;
-	padding: 0;
-	border: none;
-	font-weight: 500;
-}
-
-p > .user {
-	opacity: 0.5;
-}
-
-td > .user,
-td > time {
-	white-space: nowrap;
-}
-
-input[type="checkbox"] {
-	transform: scale(1.5);
-	margin-right: 0.6em;
-	vertical-align: middle;
-}
-
-p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-.image {
-	border: none;
-	margin: 1.5em 0;
-	padding: 0;
-	border-radius: 0;
-	text-align: center;
-}
-
-.code,
-code {
-	background: rgba(135, 131, 120, 0.15);
-	border-radius: 3px;
-	padding: 0.2em 0.4em;
-	border-radius: 3px;
-	font-size: 85%;
-	tab-size: 2;
-}
-
-code {
-	color: #eb5757;
-}
-
-.code {
-	padding: 1.5em 1em;
-}
-
-.code-wrap {
-	white-space: pre-wrap;
-	word-break: break-all;
-}
-
-.code > code {
-	background: none;
-	padding: 0;
-	font-size: 100%;
-	color: inherit;
-}
-
-blockquote {
-	font-size: 1em;
-	margin: 1em 0;
-	padding-left: 1em;
-	border-left: 3px solid rgb(55, 53, 47);
-}
-
-blockquote.quote-large {
-	font-size: 1.25em;
-}
-
-.bookmark {
-	text-decoration: none;
-	max-height: 8em;
-	padding: 0;
-	display: flex;
-	width: 100%;
-	align-items: stretch;
-}
-
-.bookmark-title {
-	font-size: 0.85em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 1.75em;
-	white-space: nowrap;
-}
-
-.bookmark-text {
-	display: flex;
-	flex-direction: column;
-}
-
-.bookmark-info {
-	flex: 4 1 180px;
-	padding: 12px 14px 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.bookmark-image {
-	width: 33%;
-	flex: 1 1 180px;
-	display: block;
-	position: relative;
-	object-fit: cover;
-	border-radius: 1px;
-}
-
-.bookmark-description {
-	color: rgba(55, 53, 47, 0.6);
-	font-size: 0.75em;
-	overflow: hidden;
-	max-height: 4.5em;
-	word-break: break-word;
-}
-
-.bookmark-href {
-	font-size: 0.75em;
-	margin-top: 0.25em;
-}
-
-.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
-.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
-.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
-.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
-.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
-.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
-.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
-.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
-.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
-.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
-.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.highlight-default {
-	color: rgba(44, 44, 43, 1);
-}
-.highlight-gray {
-	color: rgba(142, 139, 134, 1);
-	fill: rgba(142, 139, 134, 1);
-}
-.highlight-brown {
-	color: rgba(182, 137, 101, 1);
-	fill: rgba(182, 137, 101, 1);
-}
-.highlight-orange {
-	color: rgba(213, 128, 59, 1);
-	fill: rgba(213, 128, 59, 1);
-}
-.highlight-yellow {
-	color: rgba(229, 178, 68, 1);
-	fill: rgba(229, 178, 68, 1);
-}
-.highlight-teal {
-	color: rgba(85, 167, 124, 1);
-	fill: rgba(85, 167, 124, 1);
-}
-.highlight-blue {
-	color: rgba(35, 131, 226, 1);
-	fill: rgba(35, 131, 226, 1);
-}
-.highlight-purple {
-	color: rgba(181, 119, 214, 1);
-	fill: rgba(181, 119, 214, 1);
-}
-.highlight-pink {
-	color: rgba(219, 105, 153, 1);
-	fill: rgba(219, 105, 153, 1);
-}
-.highlight-red {
-	color: rgba(229, 100, 88, 1);
-	fill: rgba(229, 100, 88, 1);
-}
-.highlight-default_background {
-	color: rgba(44, 44, 43, 1);
-}
-.highlight-gray_background {
-	background: rgba(240, 239, 237, 1);
-}
-.highlight-brown_background {
-	background: rgba(245, 237, 233, 1);
-}
-.highlight-orange_background {
-	background: rgba(251, 235, 222, 1);
-}
-.highlight-yellow_background {
-	background: rgba(249, 243, 220, 1);
-}
-.highlight-teal_background {
-	background: rgba(232, 241, 236, 1);
-}
-.highlight-blue_background {
-	background: rgba(232, 242, 250, 1);
-}
-.highlight-purple_background {
-	background: rgba(243, 235, 249, 1);
-}
-.highlight-pink_background {
-	background: rgba(250, 233, 241, 1);
-}
-.highlight-red_background {
-	background: rgba(252, 233, 231, 1);
-}
-.block-color-default {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray {
-	color: rgba(142, 139, 134, 1);
-	fill: rgba(142, 139, 134, 1);
-}
-.block-color-brown {
-	color: rgba(182, 137, 101, 1);
-	fill: rgba(182, 137, 101, 1);
-}
-.block-color-orange {
-	color: rgba(213, 128, 59, 1);
-	fill: rgba(213, 128, 59, 1);
-}
-.block-color-yellow {
-	color: rgba(229, 178, 68, 1);
-	fill: rgba(229, 178, 68, 1);
-}
-.block-color-teal {
-	color: rgba(85, 167, 124, 1);
-	fill: rgba(85, 167, 124, 1);
-}
-.block-color-blue {
-	color: rgba(35, 131, 226, 1);
-	fill: rgba(35, 131, 226, 1);
-}
-.block-color-purple {
-	color: rgba(181, 119, 214, 1);
-	fill: rgba(181, 119, 214, 1);
-}
-.block-color-pink {
-	color: rgba(219, 105, 153, 1);
-	fill: rgba(219, 105, 153, 1);
-}
-.block-color-red {
-	color: rgba(229, 100, 88, 1);
-	fill: rgba(229, 100, 88, 1);
-}
-.block-color-default_background {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray_background {
-	background: rgba(240, 239, 237, 1);
-}
-.block-color-brown_background {
-	background: rgba(245, 237, 233, 1);
-}
-.block-color-orange_background {
-	background: rgba(251, 235, 222, 1);
-}
-.block-color-yellow_background {
-	background: rgba(249, 243, 220, 1);
-}
-.block-color-teal_background {
-	background: rgba(232, 241, 236, 1);
-}
-.block-color-blue_background {
-	background: rgba(232, 242, 250, 1);
-}
-.block-color-purple_background {
-	background: rgba(243, 235, 249, 1);
-}
-.block-color-pink_background {
-	background: rgba(250, 233, 241, 1);
-}
-.block-color-red_background {
-	background: rgba(252, 233, 231, 1);
-}
-.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
-.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
-.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
-.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
-.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
-.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
-.select-value-color-blue { background-color: rgba(0, 99, 174, 0.172); }
-.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
-.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
-.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
-
-.checkbox {
-	display: inline-flex;
-	vertical-align: text-bottom;
-	width: 16;
-	height: 16;
-	background-size: 16px;
-	margin-left: 2px;
-	margin-right: 5px;
-}
-
-.checkbox-on {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-
-.checkbox-off {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-	
-</style></head><body><article id="26bfd1b7-607e-800e-8379-cb122af0d174" class="page sans"><header><h1 class="page-title"><strong>Decision Bear - Privacy Policy</strong></h1><p class="page-description"></p></header><div class="page-body"><p id="26bfd1b7-607e-8170-b022-f4a1d4744e5c" class=""><strong>Effective Date: 2025.9.15</strong></p><p id="26bfd1b7-607e-81b5-9f1f-d031822395db" class="">This Privacy Policy explains how Decision Bear (“we”, “us”, or “our”) collects, uses, discloses, and protects information from users of our services. By using our services, you agree to the practices described in this Privacy Policy.</p><h2 id="26bfd1b7-607e-817a-8fc6-f16115674e22" class="">1. Information We Collect</h2><p id="26bfd1b7-607e-8140-8307-df257859ce0a" class="">We may collect personal and non-personal information to provide and improve our services.</p><h3 id="26bfd1b7-607e-8140-9c99-d0801e9dea82" class="">1.1 Device and Technical Information</h3><p id="26bfd1b7-607e-81f4-ac39-e09ac7b514ec" class="">We may automatically collect technical information about your device, including but not limited to:</p><ul id="26bfd1b7-607e-8109-a5ba-e64a02d382c4" class="bulleted-list"><li style="list-style-type:disc">IP address, country code, time zone</li></ul><ul id="26bfd1b7-607e-8136-9ac7-fbde18a2c804" class="bulleted-list"><li style="list-style-type:disc">Device identifiers (IDFV), language, network status</li></ul><ul id="26bfd1b7-607e-81ce-aea0-eb9289606d47" class="bulleted-list"><li style="list-style-type:disc">Device model, operating system, CPU, storage, screen size, firmware</li></ul><ul id="26bfd1b7-607e-815d-8764-e37262e4ac24" class="bulleted-list"><li style="list-style-type:disc">SDK version, application API keys, push notification token</li></ul><ul id="26bfd1b7-607e-81ca-9a8b-fb3e4ee2b3f3" class="bulleted-list"><li style="list-style-type:disc">Browser type and version, browser plugins</li></ul><p id="26bfd1b7-607e-8147-8aaf-ce3c6c54a79f" class="">Some of this information may uniquely identify your device, but it does not personally identify you<strong> </strong>in most cases. Certain laws (e.g., in the U.S.) may consider device identifiers as personal information.</p><h3 id="26bfd1b7-607e-8122-b81e-f02c96fb17b3" class="">1.2 Personal Information</h3><p id="26bfd1b7-607e-81bc-b549-e8936ea84b06" class="">When using our services, you may provide personally identifiable information (“Personal Data”), including but not limited to:</p><ul id="26bfd1b7-607e-81c7-8d06-dd565b9b75d3" class="bulleted-list"><li style="list-style-type:disc">Mobile phone number</li></ul><ul id="26bfd1b7-607e-810f-a015-e7218fd03c6c" class="bulleted-list"><li style="list-style-type:disc">Email address</li></ul><ul id="26bfd1b7-607e-81ee-8e4f-e69eafd8af77" class="bulleted-list"><li style="list-style-type:disc">Address details</li></ul><p id="26bfd1b7-607e-8131-9eac-f299ca88d3b6" class="">This information is collected only to provide services and improve user experience.</p><h2 id="26bfd1b7-607e-81fb-9506-dd1a08209ac4" class="">2. How We Use Information</h2><p id="26bfd1b7-607e-81ae-aba2-d530cf5ad76b" class="">We use the collected information for purposes including, but not limited to:</p><ul id="26bfd1b7-607e-816c-8744-e74167254363" class="bulleted-list"><li style="list-style-type:disc">Providing, maintaining, and improving services</li></ul><ul id="26bfd1b7-607e-8128-a4ab-fa63406ffcec" class="bulleted-list"><li style="list-style-type:disc">Notifying users about service changes</li></ul><ul id="26bfd1b7-607e-818a-8e73-f0e77134a4ed" class="bulleted-list"><li style="list-style-type:disc">Enabling interactive features</li></ul><ul id="26bfd1b7-607e-814c-b20e-cd049fa60a33" class="bulleted-list"><li style="list-style-type:disc">Providing customer support</li></ul><ul id="26bfd1b7-607e-8121-8758-e5337f784ce5" class="bulleted-list"><li style="list-style-type:disc">Analyzing and monitoring service usage</li></ul><ul id="26bfd1b7-607e-81a3-9024-eaf32f1a972d" class="bulleted-list"><li style="list-style-type:disc">Detecting, preventing, and addressing technical issues</li></ul><p id="26bfd1b7-607e-8109-b83a-d55ed236f774" class="">When you access our services via mobile devices, we may collect device type, device ID, IP address, mobile operating system, browser type, and other diagnostic data.</p><h2 id="26bfd1b7-607e-8126-aa52-f5f342fa8f05" class="">3. Information Storage and Security</h2><h3 id="26bfd1b7-607e-81c0-99c9-c3968f81fcd7" class="">3.1 Data Security</h3><p id="26bfd1b7-607e-8132-b429-cc35559ec245" class="">We implement reasonable technical and administrative measures to protect your information. However, no security system is completely secure, and we cannot guarantee absolute security.</p><h3 id="26bfd1b7-607e-812a-8278-e1d2133dc6ad" class="">3.2 Data Transfer</h3><p id="26bfd1b7-607e-81cc-849d-ec3df6bea552" class="">Your information may be transferred to servers outside your country, where data protection laws may differ. By providing your information, you consent to such transfers.</p><h3 id="26bfd1b7-607e-813f-9938-d1e6c73921e7" class="">3.3 Data Disclosure</h3><p id="26bfd1b7-607e-8114-8eda-fc4fddef8c31" class="">We may disclose your information if necessary:</p><ul id="26bfd1b7-607e-810a-aecc-c7e0a3a12386" class="bulleted-list"><li style="list-style-type:disc">To comply with legal obligations</li></ul><ul id="26bfd1b7-607e-81c0-9fe0-dc85c560e267" class="bulleted-list"><li style="list-style-type:disc">To protect our rights, property, or safety</li></ul><ul id="26bfd1b7-607e-818d-b881-dd43ae0d4510" class="bulleted-list"><li style="list-style-type:disc">To prevent or investigate potential misconduct related to services</li></ul><h3 id="26bfd1b7-607e-811e-b3a6-ee68ee19b6fa" class="">3.4 Service Providers</h3><p id="26bfd1b7-607e-8191-a307-df2767b3b21f" class="">We may use third-party service providers to perform functions on our behalf. They are only allowed to access your information as necessary for their services and must comply with this Privacy Policy.</p><h3 id="26bfd1b7-607e-81ef-b46b-fc0649dea826" class="">3.5 Links to Other Websites</h3><p id="26bfd1b7-607e-819b-af4d-c89246765909" class="">Our services may contain links to third-party websites. We are not responsible for their privacy practices. We encourage you to review their privacy policies.</p><h2 id="26bfd1b7-607e-81e5-b01e-ee680d26ff7f" class="">4. Data Deletion</h2><p id="26bfd1b7-607e-8198-bc84-df7dcae25d1a" class="">When information is no longer necessary, we take reasonable measures to delete it. We may also remove user-generated content that violates our policies (e.g., pornographic or violent content). Users can report inappropriate content.</p><h2 id="26bfd1b7-607e-8157-a8d2-dc452494467c" class="">5. Protection of Minors</h2><p id="26bfd1b7-607e-814d-adac-e5ccb15a57f8" class="">We value the privacy of minors.</p><ul id="26bfd1b7-607e-811e-97ae-f81ce6f9d859" class="bulleted-list"><li style="list-style-type:disc">Under 14: Users must obtain parental or guardian consent.</li></ul><ul id="26bfd1b7-607e-816f-9a05-f5f66d01ea04" class="bulleted-list"><li style="list-style-type:disc">Between 14 and 18: Users should ensure they or their guardians consent.</li></ul><ul id="26bfd1b7-607e-81f3-8c83-f8b3b9835d21" class="bulleted-list"><li style="list-style-type:disc">If we learn personal data of children under 14 has been collected without consent, we will delete it as soon as possible.</li></ul><h2 id="26bfd1b7-607e-81b3-9eee-c5873b6d999f" class="">6. Cookies and Tracking Technologies</h2><p id="26bfd1b7-607e-81ed-979d-f93579eb4748" class="">We use cookies and similar technologies to improve our services:</p><ul id="26bfd1b7-607e-812d-8c8a-cb890025ee12" class="bulleted-list"><li style="list-style-type:disc"><strong>Session Cookies:</strong> Required for service functionality</li></ul><ul id="26bfd1b7-607e-8184-82d6-c9bef14847b2" class="bulleted-list"><li style="list-style-type:disc"><strong>Preference Cookies:</strong> Remember your settings and preferences</li></ul><ul id="26bfd1b7-607e-81ae-9966-c997321228ff" class="bulleted-list"><li style="list-style-type:disc"><strong>Security Cookies:</strong> Ensure security of the services</li></ul><p id="26bfd1b7-607e-814a-8982-e92d446f2e61" class="">You may disable cookies in your browser, but some features may not work properly.</p><h2 id="26bfd1b7-607e-8154-a8d6-f13043abcaa5" class="">7. Analytics</h2><p id="26bfd1b7-607e-8150-a77c-c31139dacda8" class="">We may use third-party analytics tools, e.g., <strong>Firebase SDK</strong>, for Analytics, Crash Reporting.</p><ul id="26bfd1b7-607e-81b5-a32e-edee2862ed05" class="bulleted-list"><li style="list-style-type:disc">Privacy policy: https://policies.google.com/privacy</li></ul><h2 id="26bfd1b7-607e-81bd-8e52-c46833634bfe" class="">8. User Rights</h2><p id="26bfd1b7-607e-816e-a3ab-f17895c7abd8" class="">You may uninstall our applications and stop using our services at any time to prevent further collection of your information.</p><h2 id="26bfd1b7-607e-81d7-80c6-f4ed7634775b" class="">9. California Privacy Rights</h2><p id="26bfd1b7-607e-811a-b597-fcbbb5ee99cd" class="">If you are a California resident, you may have additional rights under <strong>CCPA/CPRA</strong>, such as:</p><ul id="26bfd1b7-607e-818c-b1df-fee123ec9c3c" class="bulleted-list"><li style="list-style-type:disc">Requesting access to your personal data</li></ul><ul id="26bfd1b7-607e-81f3-9124-ce129dec71bf" class="bulleted-list"><li style="list-style-type:disc">Requesting deletion of your personal data</li></ul><ul id="26bfd1b7-607e-81e7-9426-ef654cb7e8b3" class="bulleted-list"><li style="list-style-type:disc">Opting out of the sale of personal data</li></ul><h2 id="26bfd1b7-607e-81ce-8f9f-dfd64f2f9135" class="">10. EEA, UK, and Switzerland Users</h2><p id="26bfd1b7-607e-813a-8546-f4b6a42ed87b" class="">Residents of the <strong>EEA, UK, and Switzerland</strong> may have rights under <strong>GDPR</strong>, including:</p><ul id="26bfd1b7-607e-81c5-a597-ca223e6c1bf3" class="bulleted-list"><li style="list-style-type:disc">Accessing, correcting, or deleting personal data</li></ul><ul id="26bfd1b7-607e-819b-84cb-fc96b002e5c3" class="bulleted-list"><li style="list-style-type:disc">Restricting or objecting to processing</li></ul><ul id="26bfd1b7-607e-815a-a903-d29a7d7ca7b9" class="bulleted-list"><li style="list-style-type:disc">Data portability</li></ul><ul id="26bfd1b7-607e-8115-93ca-e082b8c15b41" class="bulleted-list"><li style="list-style-type:disc">Right to lodge a complaint with a supervisory authority</li></ul><p id="26bfd1b7-607e-8143-b2ed-fd3803d42304" class="">You may also cancel subscriptions within 14 days for a refund, subject to deductions for any service already used.</p><h2 id="26bfd1b7-607e-8154-908d-f83dc705884c" class="">11. Contact Us</h2><p id="26bfd1b7-607e-8143-9968-c3f45ba4d04d" class="">If you have questions about this Privacy Policy, please contact us:</p><ul id="26bfd1b7-607e-8177-8567-ecdf9f29f2a8" class="bulleted-list"><li style="list-style-type:disc"><strong>Email:</strong> abel_dev@icloud.com</li></ul><h2 id="26bfd1b7-607e-81ab-8e10-cab79019aecc" class="">12. Changes to this Privacy Policy</h2><p id="26bfd1b7-607e-81ea-931e-e4a30bc23487" class="">We may update this Privacy Policy from time to time. Changes take effect when posted on this page. Please review periodically.</p><p id="26bfd1b7-607e-816f-b174-cdcfa991416b" class="">
-</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decision Bear - Privacy Policy</title>
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #f5f5f5;
+        padding: 20px;
+      }
+
+      /* Container */
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      /* Header */
+      .header {
+        background: #2c3e50;
+        color: white;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .header .effective-date {
+        font-size: 1rem;
+        opacity: 0.9;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 8px 16px;
+        border-radius: 20px;
+        display: inline-block;
+        margin-top: 10px;
+      }
+
+      /* Content */
+      .content {
+        padding: 30px;
+      }
+
+      /* Section styles */
+      .section {
+        margin-bottom: 30px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 6px;
+        border-left: 4px solid #2c3e50;
+      }
+
+      .section h2 {
+        color: #2c3e50;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+
+      .section h3 {
+        color: #555;
+        font-size: 1.2rem;
+        margin: 20px 0 10px 0;
+        padding-left: 15px;
+        border-left: 3px solid #2c3e50;
+      }
+
+      .section p {
+        color: #666;
+        line-height: 1.7;
+        margin-bottom: 15px;
+      }
+
+      .section ul {
+        margin: 15px 0;
+        padding-left: 20px;
+      }
+
+      .section li {
+        color: #666;
+        line-height: 1.7;
+        margin-bottom: 8px;
+      }
+
+      .section strong {
+        color: #2c3e50;
+        font-weight: 600;
+      }
+
+      .section a {
+        color: #2c3e50;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .section a:hover {
+        text-decoration: underline;
+      }
+
+      /* Contact section */
+      .contact-section {
+        background: #2c3e50;
+        color: white;
+        text-align: center;
+        border-radius: 6px;
+        padding: 25px;
+        margin: 30px 0;
+      }
+
+      .contact-section h2 {
+        color: white;
+        margin-bottom: 15px;
+      }
+
+      .contact-section p {
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 20px;
+      }
+
+      .contact-section a {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-weight: 500;
+        transition: background-color 0.2s ease;
+      }
+
+      .contact-section a:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      /* Footer */
+      .footer {
+        background: #ecf0f1;
+        color: #666;
+        text-align: center;
+        padding: 20px;
+        margin-top: 30px;
+        font-size: 0.9rem;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        body {
+          padding: 10px;
+        }
+
+        .header {
+          padding: 25px 20px;
+        }
+
+        .header h1 {
+          font-size: 1.8rem;
+        }
+
+        .content {
+          padding: 25px 20px;
+        }
+
+        .section {
+          padding: 20px;
+          margin-bottom: 25px;
+        }
+
+        .section h2 {
+          font-size: 1.3rem;
+        }
+
+        .section h3 {
+          font-size: 1.1rem;
+        }
+
+        .contact-section {
+          padding: 25px 20px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .header h1 {
+          font-size: 1.6rem;
+        }
+
+        .section h2 {
+          font-size: 1.2rem;
+        }
+
+        .section h3 {
+          font-size: 1rem;
+        }
+      }
+
+      /* Print styles */
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+        }
+
+        .container {
+          box-shadow: none;
+          border-radius: 0;
+        }
+
+        .header {
+          background: #2c3e50 !important;
+          -webkit-print-color-adjust: exact;
+        }
+
+        .contact-section {
+          background: #2c3e50 !important;
+          -webkit-print-color-adjust: exact;
+        }
+
+        .section {
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Decision Bear - Privacy Policy</h1>
+        <div class="effective-date">Effective Date: 2025.9.15</div>
+      </header>
+
+      <div class="content">
+        <div class="section">
+          <p>
+            This Privacy Policy explains how Decision Bear ("we", "us", or
+            "our") collects, uses, discloses, and protects information from
+            users of our services. By using our services, you agree to the
+            practices described in this Privacy Policy.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>1. Information We Collect</h2>
+          <p>
+            We may collect personal and non-personal information to provide and
+            improve our services.
+          </p>
+
+          <h3>1.1 Device and Technical Information</h3>
+          <p>
+            We may automatically collect technical information about your
+            device, including but not limited to:
+          </p>
+          <ul>
+            <li>IP address, country code, time zone</li>
+            <li>Device identifiers (IDFV), language, network status</li>
+            <li>
+              Device model, operating system, CPU, storage, screen size,
+              firmware
+            </li>
+            <li>SDK version, application API keys, push notification token</li>
+            <li>Browser type and version, browser plugins</li>
+          </ul>
+          <p>
+            Some of this information may uniquely identify your device, but it
+            does not personally identify you in most cases. Certain laws (e.g.,
+            in the U.S.) may consider device identifiers as personal
+            information.
+          </p>
+
+          <h3>1.2 Personal Information</h3>
+          <p>
+            When using our services, you may provide personally identifiable
+            information ("Personal Data"), including but not limited to:
+          </p>
+          <ul>
+            <li>Mobile phone number</li>
+            <li>Email address</li>
+            <li>Address details</li>
+          </ul>
+          <p>
+            This information is collected only to provide services and improve
+            user experience.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>2. How We Use Information</h2>
+          <p>
+            We use the collected information for purposes including, but not
+            limited to:
+          </p>
+          <ul>
+            <li>Providing, maintaining, and improving services</li>
+            <li>Notifying users about service changes</li>
+            <li>Enabling interactive features</li>
+            <li>Providing customer support</li>
+            <li>Analyzing and monitoring service usage</li>
+            <li>Detecting, preventing, and addressing technical issues</li>
+          </ul>
+          <p>
+            When you access our services via mobile devices, we may collect
+            device type, device ID, IP address, mobile operating system, browser
+            type, and other diagnostic data.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>3. Information Storage and Security</h2>
+
+          <h3>3.1 Data Security</h3>
+          <p>
+            We implement reasonable technical and administrative measures to
+            protect your information. However, no security system is completely
+            secure, and we cannot guarantee absolute security.
+          </p>
+
+          <h3>3.2 Data Transfer</h3>
+          <p>
+            Your information may be transferred to servers outside your country,
+            where data protection laws may differ. By providing your
+            information, you consent to such transfers.
+          </p>
+
+          <h3>3.3 Data Disclosure</h3>
+          <p>We may disclose your information if necessary:</p>
+          <ul>
+            <li>To comply with legal obligations</li>
+            <li>To protect our rights, property, or safety</li>
+            <li>
+              To prevent or investigate potential misconduct related to services
+            </li>
+          </ul>
+
+          <h3>3.4 Service Providers</h3>
+          <p>
+            We may use third-party service providers to perform functions on our
+            behalf. They are only allowed to access your information as
+            necessary for their services and must comply with this Privacy
+            Policy.
+          </p>
+
+          <h3>3.5 Links to Other Websites</h3>
+          <p>
+            Our services may contain links to third-party websites. We are not
+            responsible for their privacy practices. We encourage you to review
+            their privacy policies.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>4. Data Deletion</h2>
+          <p>
+            When information is no longer necessary, we take reasonable measures
+            to delete it. We may also remove user-generated content that
+            violates our policies (e.g., pornographic or violent content). Users
+            can report inappropriate content.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>5. Protection of Minors</h2>
+          <p>We value the privacy of minors.</p>
+          <ul>
+            <li>Under 14: Users must obtain parental or guardian consent.</li>
+            <li>
+              Between 14 and 18: Users should ensure they or their guardians
+              consent.
+            </li>
+            <li>
+              If we learn personal data of children under 14 has been collected
+              without consent, we will delete it as soon as possible.
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>6. Cookies and Tracking Technologies</h2>
+          <p>
+            We use cookies and similar technologies to improve our services:
+          </p>
+          <ul>
+            <li>
+              <strong>Session Cookies:</strong> Required for service
+              functionality
+            </li>
+            <li>
+              <strong>Preference Cookies:</strong> Remember your settings and
+              preferences
+            </li>
+            <li>
+              <strong>Security Cookies:</strong> Ensure security of the services
+            </li>
+          </ul>
+          <p>
+            You may disable cookies in your browser, but some features may not
+            work properly.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>7. Analytics</h2>
+          <p>
+            We may use third-party analytics tools, e.g.,
+            <strong>Firebase SDK</strong>, for Analytics, Crash Reporting.
+          </p>
+          <ul>
+            <li>
+              Privacy policy:
+              <a href="https://policies.google.com/privacy"
+                >https://policies.google.com/privacy</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>8. User Rights</h2>
+          <p>
+            You may uninstall our applications and stop using our services at
+            any time to prevent further collection of your information.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>9. California Privacy Rights</h2>
+          <p>
+            If you are a California resident, you may have additional rights
+            under <strong>CCPA/CPRA</strong>, such as:
+          </p>
+          <ul>
+            <li>Requesting access to your personal data</li>
+            <li>Requesting deletion of your personal data</li>
+            <li>Opting out of the sale of personal data</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>10. EEA, UK, and Switzerland Users</h2>
+          <p>
+            Residents of the <strong>EEA, UK, and Switzerland</strong> may have
+            rights under <strong>GDPR</strong>, including:
+          </p>
+          <ul>
+            <li>Accessing, correcting, or deleting personal data</li>
+            <li>Restricting or objecting to processing</li>
+            <li>Data portability</li>
+            <li>Right to lodge a complaint with a supervisory authority</li>
+          </ul>
+          <p>
+            You may also cancel subscriptions within 14 days for a refund,
+            subject to deductions for any service already used.
+          </p>
+        </div>
+
+        <div class="contact-section">
+          <h2>11. Contact Us</h2>
+          <p>
+            If you have questions about this Privacy Policy, please contact us:
+          </p>
+          <a href="mailto:abel_dev@icloud.com">abel_dev@icloud.com</a>
+        </div>
+
+        <div class="section">
+          <h2>12. Changes to this Privacy Policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time. Changes take
+            effect when posted on this page. Please review periodically.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
