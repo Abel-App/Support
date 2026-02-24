@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>记忆森林常见问题</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		:root {
+			--primary: #3B82F6;
+			--primary-light: #60A5FA;
+			--text-primary: #1F2937;
+			--text-secondary: #6B7280;
+			--text-tertiary: #9CA3AF;
+			--bg-card: #FFFFFF;
+			--bg-page: #F9FAFB;
+			--border: #E5E7EB;
+			--shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+			--shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
+			--radius: 12px;
+		}
+
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+			line-height: 1.6;
+			color: var(--text-primary);
+			max-width: 680px;
+			margin: 0 auto;
+			padding: 24px 20px 40px;
+			background: var(--bg-page);
+		}
+
+		@media screen and (max-width: 768px) {
+			body {
+				padding: 16px 12px 32px;
+			}
+		}
+
+		/* 头部 */
+		.header {
+			text-align: center;
+			padding: 32px 0 28px;
+		}
+
+		.header-icon {
+			width: 56px;
+			height: 56px;
+			margin: 0 auto 16px;
+			border-radius: 16px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}		
+
+		.header h1 {
+			font-size: 1.5rem;
+			font-weight: 600;
+			color: var(--text-primary);
+			margin: 0 0 6px;
+		}
+
+		.header p {
+			font-size: 0.875rem;
+			color: var(--text-secondary);
+			margin: 0;
+		}
+
+		/* 简介 */
+		.intro {
+			background: var(--bg-card);
+			border-radius: var(--radius);
+			padding: 20px;
+			margin-bottom: 20px;
+			box-shadow: var(--shadow);
+			font-size: 0.9rem;
+			color: var(--text-secondary);
+			line-height: 1.7;
+		}
+
+		/* 章节 */
+		.section {
+			margin-bottom: 12px;
+		}
+
+		.section-header {
+			display: flex;
+			align-items: center;
+			padding: 14px 16px;
+			background: var(--bg-card);
+			border-radius: var(--radius);
+			cursor: pointer;
+			transition: all 0.2s ease;
+			box-shadow: var(--shadow);
+			user-select: none;
+		}
+
+		.section-header:hover {
+			box-shadow: var(--shadow-hover);
+		}
+
+		.section-header:active {
+			transform: scale(0.995);
+		}
+
+		.section-icon {
+			width: 32px;
+			height: 32px;
+			border-radius: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 12px;
+			flex-shrink: 0;
+		}
+
+		.section-icon svg {
+			width: 18px;
+			height: 18px;
+			fill: white;
+		}
+
+		.section-icon.blue { background: linear-gradient(135deg, #3B82F6, #60A5FA); }
+		.section-icon.orange { background: linear-gradient(135deg, #F59E0B, #FBBF24); }
+		.section-icon.green { background: linear-gradient(135deg, #10B981, #34D399); }
+
+		.section-title {
+			flex: 1;
+			font-size: 0.95rem;
+			font-weight: 600;
+			color: var(--text-primary);
+		}
+
+		.section-arrow {
+			width: 20px;
+			height: 20px;
+			color: var(--text-tertiary);
+			transition: transform 0.25s ease;
+		}
+
+		.section-arrow svg {
+			width: 100%;
+			height: 100%;
+			fill: currentColor;
+		}
+
+		.section.collapsed .section-arrow {
+			transform: rotate(-90deg);
+		}
+
+		.section-content {
+			background: var(--bg-card);
+			border-radius: var(--radius);
+			margin-top: 8px;
+			overflow: hidden;
+			max-height: 1000px;
+			transition: all 0.3s ease;
+			box-shadow: var(--shadow);
+		}
+
+		.section.collapsed .section-content {
+			max-height: 0;
+			margin-top: 0;
+			opacity: 0;
+		}
+
+		.content-inner {
+			padding: 18px 16px;
+		}
+
+		@media screen and (max-width: 768px) {
+			.content-inner {
+				padding: 14px 12px;
+			}
+		}
+
+		/* 内容样式 */
+		.step-title {
+			font-size: 0.9rem;
+			font-weight: 600;
+			color: var(--text-primary);
+			margin: 16px 0 10px;
+			display: flex;
+			align-items: center;
+		}
+
+		.step-title:first-child {
+			margin-top: 0;
+		}
+
+		.step-num {
+			width: 20px;
+			height: 20px;
+			background: var(--primary);
+			color: white;
+			border-radius: 50%;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 0.7rem;
+			font-weight: 600;
+			margin-right: 8px;
+			flex-shrink: 0;
+		}
+
+		p {
+			margin: 0 0 10px;
+			color: var(--text-secondary);
+			font-size: 0.875rem;
+		}
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+
+		ol {
+			margin: 0;
+			padding-left: 28px;
+		}
+
+		li {
+			margin: 8px 0;
+			color: var(--text-secondary);
+			font-size: 0.875rem;
+		}
+
+		li::marker {
+			color: var(--primary);
+			font-weight: 500;
+		}
+
+		/* 问答 */
+		.qa-item {
+			padding: 14px 0;
+			border-bottom: 1px solid var(--border);
+		}
+
+		.qa-item:first-child {
+			padding-top: 0;
+		}
+
+		.qa-item:last-child {
+			border-bottom: none;
+			padding-bottom: 0;
+		}
+
+		.question {
+			font-weight: 500;
+			color: var(--text-primary);
+			margin-bottom: 6px;
+			font-size: 0.875rem;
+		}
+
+		.answer {
+			color: var(--text-secondary);
+			font-size: 0.85rem;
+		}
+
+		/* 提示 */
+		.tip {
+			background: #FEF3C7;
+			border-radius: 8px;
+			padding: 12px 14px;
+			margin: 14px 0;
+			font-size: 0.85rem;
+			color: #92400E;
+			display: flex;
+			align-items: flex-start;
+			gap: 8px;
+		}
+
+		.tip::before {
+			content: "💡";
+			font-size: 1rem;
+		}
+
+		/* 图片 */
+		.figure {
+			margin: 14px 0;
+		}
+
+		.figure p {
+			font-weight: 500;
+			color: var(--text-primary);
+			margin-bottom: 8px;
+			font-size: 0.875rem;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			border-radius: 8px;
+			display: block;
+			border: 1px solid var(--border);
+		}
+
+		/* 底部 */
+		.footer {
+			text-align: center;
+			padding: 28px 0 8px;
+			font-size: 0.8rem;
+			color: var(--text-tertiary);
+		}
+	</style>
+</head>
+<body>
+	<!-- 头部 -->
+	<header class="header">
+		<div class="header-icon">
+			<img src="assets/logo.png" alt="记忆森林" style="width:100%;height:100%;border-radius:10px;">
+		</div>
+		<h1>记忆森林</h1>
+		<p>常见问题</p>
+	</header>
+
+	<!-- 简介 -->
+	<div class="intro">
+		记忆森林是一款基于"艾宾浩斯遗忘曲线"的复习App，采用更科学的复习方式，帮助我们达到更好的学习效果。
+	</div>
+
+	<!-- 基础使用 -->
+	<div class="section" onclick="toggle(this)">
+		<div class="section-header">
+			<div class="section-icon blue">
+				<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+			</div>
+			<span class="section-title">基础使用</span>
+			<div class="section-arrow"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div>
+		</div>
+		<div class="section-content">
+			<div class="content-inner">
+				<p class="step-title"><span class="step-num">1</span>创建卡片，只需3步</p>
+				<ol>
+					<li>进入APP后，点击"+"按钮</li>
+					<li>输入标题，如"英语四级词汇01章"；为了方便分类和查询，可在"计划与标签"-"设置标签"中选择或创建标签，如"英语"</li>
+					<li>点击确定</li>
+				</ol>
+
+				<p class="step-title"><span class="step-num">2</span>计划与标签</p>
+				<p>内置默认的复习计划和默认标签，系统默认项不可删除和修改，可以通过向左滑动编辑、删除，可设为默认。"设为默认"意思是在创建卡片时，计划与标签栏中默认选中的选项。</p>
+
+				<p class="step-title"><span class="step-num">3</span>关于推迟复习</p>
+				<p>记忆森林的复习时间是动态的，如果错过了应于昨天或更早时间复习的卡片，会自动推迟至今日，而该卡片后期的所有复习都会相应地推迟，会保证每个复习间隔不变。</p>
+				<p>这样设计是为了如果昨天太忙了，今天才完成复习，那这张卡片后面所有的复习时间都会后移一天，保持原有的间隔，避免任务堆积。</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- 常见问题 -->
+	<div class="section" onclick="toggle(this)">
+		<div class="section-header">
+			<div class="section-icon orange">
+				<svg viewBox="0 0 24 24"><path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"/></svg>
+			</div>
+			<span class="section-title">常见问题</span>
+			<div class="section-arrow"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div>
+		</div>
+		<div class="section-content">
+			<div class="content-inner">
+				<div class="qa-item">
+					<p class="question">Q: 为什么创建一张卡片后，当天会出现2条卡片？</p>
+					<p class="answer">A: 因为默认复习计划的复习间隔是 30分钟-12小时-1天…，因此上午11:30前创建的卡片，当天需要复习2次，因此会有2条，可以根据个人习惯自定义复习计划。</p>
+				</div>
+				<div class="qa-item">
+					<p class="question">Q: 为什么只删除卡片的其中一条复习，该卡片会全部被删除？</p>
+					<p class="answer">A: 因为卡片只有一个，就是当前复习，后面的复习只是一种预览，因此修改、暂停复习、删除等操作会影响该卡片的所有复习。</p>
+				</div>
+				<div class="qa-item">
+					<p class="question">Q: 为什么购买了VIP后会员权益没有到账？</p>
+					<p class="answer">A: 可能因为网络等问题，VIP会员权益没有到账，可以在VIP购买页点击"恢复购买"；如果无法找回，可能是支付失败了，可以再购买一次，苹果会限制订阅期内只能成功付款一次，无需担心重复收费。</p>
+				</div>
+				<div class="qa-item">
+					<p class="question">Q: 手机上买了会员，iPad如何同步会员？</p>
+					<p class="answer">A: 在同一个Apple账户下支持多设备同步会员，一般情况下，手机购买了会员，重新打开iPad后会自动同步会员，如果没能自动同步，可以在VIP购买页点击"恢复购买"。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- iCloud同步 -->
+	<div class="section" onclick="toggle(this)">
+		<div class="section-header">
+			<div class="section-icon green">
+				<svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+			</div>
+			<span class="section-title">iCloud多设备同步</span>
+			<div class="section-arrow"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div>
+		</div>
+		<div class="section-content">
+			<div class="content-inner">
+				<div class="qa-item">
+					<p class="question">Q: 如何进行数据迁移、备份、多设备同步？</p>
+					<p class="answer">A: 设置路径：设置 - iCloud同步 - 开启iCloud同步 - 立即同步；如果"本地记录"条数等于"已同步记录"条数，表示当前设备的数据已经同步至iCloud。</p>
+				</div>
+
+				<div class="tip">目前记忆森林需要会员才能开通iCloud同步功能</div>
+
+				<p class="step-title">图文教程：</p>
+				<div class="figure">
+					<p>一. 在当前设备上：</p>
+					<img src="assets/001.png" alt="当前设备">
+				</div>
+				<div class="figure">
+					<p>二. 在新设备上（先同步会员，再同步数据）：</p>
+					<img src="assets/002.png" alt="新设备">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 底部 -->
+	<div class="footer">
+		让学习更高效，让记忆更深刻
+	</div>
+
+	<script>
+		function toggle(el) {
+			el.classList.toggle('collapsed');
+		}
+	</script>
+</body>
+</html>
