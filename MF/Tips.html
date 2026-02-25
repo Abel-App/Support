@@ -283,8 +283,8 @@
 	</div>
 
 	<!-- 基础使用 -->
-	<div class="section" onclick="toggle(this)">
-		<div class="section-header">
+	<div class="section">
+		<div class="section-header" onclick="toggle(this)">
 			<div class="section-icon blue">
 				<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
 			</div>
@@ -311,8 +311,8 @@
 	</div>
 
 	<!-- 常见问题 -->
-	<div class="section" onclick="toggle(this)">
-		<div class="section-header">
+	<div class="section">
+		<div class="section-header" onclick="toggle(this)">
 			<div class="section-icon orange">
 				<svg viewBox="0 0 24 24"><path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"/></svg>
 			</div>
@@ -342,8 +342,8 @@
 	</div>
 
 	<!-- iCloud同步 -->
-	<div class="section" onclick="toggle(this)">
-		<div class="section-header">
+	<div class="section">
+		<div class="section-header" onclick="toggle(this)">
 			<div class="section-icon green">
 				<svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
 			</div>
@@ -359,27 +359,34 @@
 
 				<div class="tip">目前记忆森林需要会员才能开通iCloud同步功能</div>
 
-				<p class="step-title">图文教程：</p>
-				<div class="figure">
-					<p>一. 在当前设备上：</p>
-					<img src="assets/001.png" alt="当前设备">
-				</div>
-				<div class="figure">
-					<p>二. 在新设备上（先同步会员，再同步数据）：</p>
-					<img src="assets/002.png" alt="新设备">
-				</div>
+				<p class="step-title">操作教程：</p>
+				<p class="step-title"><span class="step-num">1</span>在当前设备上</p>
+				<ol>
+					<li>打开APP，进入「设置」页面</li>
+					<li>点击「iCloud同步」</li>
+					<li>开启「开启iCloud同步」开关</li>
+					<li>点击底部「立即同步」按钮，等待"本地记录"条数等于"已同步记录"条数即表示同步完成</li>
+				</ol>
+
+				<p class="step-title"><span class="step-num">2</span>在新设备上（先同步会员，再同步数据）</p>
+				<ol>
+					<li>打开APP，进入「设置」-「我的VIP」，点击「恢复购买」同步会员</li>
+					<li>返回「设置」页面，点击「iCloud同步」</li>
+					<li>开启「开启iCloud同步」开关</li>
+					<li>点击底部「立即同步」按钮，等待数据同步完成</li>
+				</ol>
 			</div>
 		</div>
 	</div>
 
 	<!-- 底部 -->
 	<div class="footer">
-		科学复习，让学习更高效
+		让学习更高效，让努力看得见
 	</div>
 
 	<script>
 		function toggle(el) {
-			el.classList.toggle('collapsed');
+			el.parentElement.classList.toggle('collapsed');
 		}
 	</script>
 </body>
